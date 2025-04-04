@@ -1,11 +1,11 @@
-import React, { use } from "react";
+import React from "react";
 import Image from "next/image";
 import { Label } from "@/components/ui/label";
 import { Input } from "@/components/ui/input";
 import { Button } from "@/components/ui/button";
 import { useRouter } from "next/router";
+import Icon from "../../../public/image/icon.jpg";
 
-let Icon = require("../../../public/image/icon.jpg");
 export default function Login() {
   const router = useRouter();
   return (
@@ -46,7 +46,7 @@ export default function Login() {
             </span>
           </div>
           <div className="text-center text-sm mt-4">
-            Don't have an account?{" "}
+            Don t have an account?
             <span
               className="text-green-900"
               onClick={() => router.push("/signup")}

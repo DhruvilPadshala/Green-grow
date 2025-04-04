@@ -1,7 +1,6 @@
 import type { ReactNode } from "react";
 import Image from "next/image";
-
-let Green = require("../../../public/image/green.jpg");
+import Green from "../../../public/image/green.jpg";
 
 interface AuthLayoutProps {
   children: ReactNode;
