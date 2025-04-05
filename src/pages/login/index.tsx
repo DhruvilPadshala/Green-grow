@@ -35,7 +35,7 @@ export default function Login() {
             />
           </div>
           <div className="w-full mt-4">
-            <Button className="w-full bg-green-900">Submit</Button>
+            <Button className="w-full">Submit</Button>
           </div>
           <div className="text-center text-sm mt-4">
             <span
@@ -46,9 +46,9 @@ export default function Login() {
             </span>
           </div>
           <div className="text-center text-sm mt-4">
-            Don t have an account?
+            {"Don't have an account ?"}
             <span
-              className="text-green-900"
+              className="text-green-900 ml-2 "
               onClick={() => router.push("/signup")}
             >
               Sign up

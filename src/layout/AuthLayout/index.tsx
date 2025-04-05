@@ -7,9 +7,9 @@ interface AuthLayoutProps {
 }
 export default function AuthLayout({ children }: AuthLayoutProps) {
   return (
-    <div className="flex min-h-screen">
-      {/* Image area (60%) */}
-      <div className="hidden bg-green-600 md:block w-[70%]">
+    <div className="flex min-h-screen h-screen flex-col lg:flex-row">
+      {/* Image area (70%) */}
+      <div className="relative hidden lg:flex w-full flex-col justify-center lg:w-[70%]">
         <div className="relative h-full w-full">
           <Image
             src={Green}
@@ -26,9 +26,9 @@ export default function AuthLayout({ children }: AuthLayoutProps) {
           </div>
         </div>
       </div>
-      {/* Content area (40%) */}
-      <div className="flex flex-col items-center justify-center w-[30%] bg-white ">
-        <div className="w-full">{children}</div>
+      {/* Content area (30%) */}
+      <div className="flex w-full items-center justify-center bg-background p-2 lg:w-[30%]">
+        {children}
       </div>
     </div>
   );
