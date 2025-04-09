@@ -1,5 +1,5 @@
 import AuthLayout from "@/layout/AuthLayout";
-import { useState } from "react";
+import { useEffect, useState } from "react";
 import Icon from "../../../public/image/icon.jpg";
 import Image from "next/image";
 import { Label } from "@/components/ui/label";
@@ -10,6 +10,9 @@ import { useRouter } from "next/router";
 export default function Signup() {
   const router = useRouter();
   const [step, setStep] = useState(1);
+  useEffect(() => {
+    document.title = "Green Grow || signup";
+  }, []);
 
   return (
     <div className="min-h-screen flex flex-col items-center justify-center w-full  bg-white p-0 md:p-5">

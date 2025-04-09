@@ -1,4 +1,4 @@
-import React from "react";
+import React, { useEffect } from "react";
 import Image from "next/image";
 import { Label } from "@/components/ui/label";
 import { Input } from "@/components/ui/input";
@@ -9,6 +9,9 @@ import AuthLayout from "@/layout/AuthLayout";
 
 export default function Login() {
   const router = useRouter();
+  useEffect(() => {
+    document.title = "Green Grow || login";
+  }, []);
   return (
     <div className=" min-h-screen flex flex-col items-center justify-center w-full bg-white p-0 md:p-5">
       <div className="w-full max-w-md mx-auto flex flex-col items-center justify-center">
