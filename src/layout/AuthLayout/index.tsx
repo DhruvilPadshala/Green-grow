@@ -21,7 +21,7 @@ export default function AuthLayout({ children }: AuthLayoutProps) {
           <div className="absolute inset-0 bg-green-600/40" />
           <div className="absolute bottom-12 left-12 max-w-md text-white">
             <h2 className="mb-4 text-3xl font-bold">
-              Sustainable and Smart Modern Agricultural Practices{" "}
+              Sustainable and Smart Modern GreenGrow.{" "}
             </h2>
           </div>
         </div>

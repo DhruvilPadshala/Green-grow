@@ -5,13 +5,14 @@ import { Input } from "@/components/ui/input";
 import { Button } from "@/components/ui/button";
 import { useRouter } from "next/router";
 import Icon from "../../../public/image/icon.jpg";
+import AuthLayout from "@/layout/AuthLayout";
 
 export default function Login() {
   const router = useRouter();
   return (
     <div className="flex flex-col items-center justify-center w-full bg-white p-5">
       <div className="w-[90%] mx-auto flex flex-col items-center justify-center">
-        <div className="w-[80%] flex flex-col items-center justify-center mt-4">
+        <div className="w-[80%] flex flex-col items-center justify-center">
           <Image src={Icon} alt="Logo" width={180} height={40} />
         </div>
         <h1 className="text-2xl font-bold">Login</h1>
@@ -35,12 +36,12 @@ export default function Login() {
             />
           </div>
           <div className="w-full mt-4">
-            <Button className="w-full">Submit</Button>
+            <Button className="w-full">Login</Button>
           </div>
           <div className="text-center text-sm mt-4">
             <span
               className="text-green-900"
-              onClick={() => router.push("/forgot-password")}
+              // onClick={() => router.push("/forgot-password")}
             >
               Forgot password?
             </span>
@@ -59,3 +60,4 @@ export default function Login() {
     </div>
   );
 }
+Login.layout = AuthLayout;
