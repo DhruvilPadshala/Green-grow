@@ -10,15 +10,15 @@ import AuthLayout from "@/layout/AuthLayout";
 export default function Login() {
   const router = useRouter();
   return (
-    <div className="flex flex-col items-center justify-center w-full bg-white p-5">
-      <div className="w-[90%] mx-auto flex flex-col items-center justify-center">
-        <div className="w-[80%] flex flex-col items-center justify-center">
+    <div className=" min-h-screen flex flex-col items-center justify-center w-full bg-white p-0 md:p-5">
+      <div className="w-full max-w-md mx-auto flex flex-col items-center justify-center">
+        <div className="w-full flex flex-col items-center justify-center">
           <Image src={Icon} alt="Logo" width={180} height={40} />
         </div>
         <h1 className="text-2xl font-bold">Login</h1>
-        <div className="flex flex-col items-center justify-center mt-4 w-[80%]">
-          <div className="w-full mb-4">
-            <Label htmlFor="email"> Email </Label>
+        <div className="flex flex-col items-center justify-center mt-4 w-full">
+          <div className="w-[90%] mb-4">
+            <Label htmlFor="email">Email</Label>
             <Input
               id="email"
               type="email"
@@ -26,8 +26,8 @@ export default function Login() {
               className="mt-2"
             />
           </div>
-          <div className="w-full mb-4">
-            <Label htmlFor="password"> Password </Label>
+          <div className="w-[90%] mb-4">
+            <Label htmlFor="password">Password</Label>
             <Input
               id="password"
               type="password"
@@ -35,21 +35,16 @@ export default function Login() {
               className="mt-2"
             />
           </div>
-          <div className="w-full mt-4">
+          <div className="w-[90%] mt-4">
             <Button className="w-full">Login</Button>
           </div>
           <div className="text-center text-sm mt-4">
-            <span
-              className="text-green-900"
-              // onClick={() => router.push("/forgot-password")}
-            >
-              Forgot password?
-            </span>
+            <span className="text-green-900">Forgot password?</span>
           </div>
           <div className="text-center text-sm mt-4">
-            {"Don't have an account ?"}
+            {"Don't have an account?"}
             <span
-              className="text-green-900 ml-2 "
+              className="text-green-900 ml-2"
               onClick={() => router.push("/signup")}
             >
               Sign up

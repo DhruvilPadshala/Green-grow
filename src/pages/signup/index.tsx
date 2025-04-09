@@ -12,9 +12,9 @@ export default function Signup() {
   const [step, setStep] = useState(1);
 
   return (
-    <div className="flex flex-col items-center justify-center w-full p-5">
-      <div className="w-[90%] mx-auto flex flex-col items-center justify-center">
-        <div className="w-[80%] flex flex-col items-center justify-center mt-4">
+    <div className="min-h-screen flex flex-col items-center justify-center w-full  bg-white p-0 md:p-5">
+      <div className="w-full max-w-md mx-auto flex flex-col items-center justify-center">
+        <div className="w-full flex flex-col items-center justify-center">
           <Image
             src={Icon || "/placeholder.svg"}
             alt="Logo"
@@ -23,7 +23,7 @@ export default function Signup() {
           />
         </div>
         <h1 className="text-2xl font-bold">Signup</h1>
-        <div className="flex flex-col items-center justify-center mt-8 w-[90%]">
+        <div className="flex flex-col items-center justify-center mt-4 w-[90%]">
           {step === 1 && (
             <div>
               <div className="w-full flex flex-row items-center justify-center gap-4">
@@ -79,7 +79,7 @@ export default function Signup() {
             </div>
           )}
           {step === 2 && (
-            <div className="flex flex-col items-center justify-center w-[90%]">
+            <div className="flex flex-col items-center justify-center w-full">
               <div className="w-full mb-4">
                 <Label htmlFor="country">Country</Label>
                 <Input
@@ -119,12 +119,12 @@ export default function Signup() {
               <div className="flex flex-row gap-4 mt-2 w-full">
                 <Button
                   variant="outline"
-                  className="w-[50%]"
+                  className="w-[48%]"
                   onClick={() => setStep(1)}
                 >
                   Back
                 </Button>
-                {step === 2 && <Button className="w-[50%]">Signup</Button>}
+                {step === 2 && <Button className="w-[48%]">Signup</Button>}
               </div>
             </div>
           )}
